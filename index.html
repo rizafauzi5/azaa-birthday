@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/image/love-letter.png?v=3">
+    <title>Azzahra Turns 15 y.o 🎉🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-rose: #d4a373;
+            --soft-pink: #faedcd;
+            --deep-romance: #603808;
+            --white-silk: #fefae0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white-silk);
+            color: var(--deep-romance);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), 
+                        url('https://images.unsplash.com/photo-1518131394553-c3e028063a52?auto=format&fit=crop&q=80&w=1500'); /* Replace with your photo URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .date {
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        /* --- Messages Section --- */
+        .section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .love-note {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 2px solid var(--primary-rose);
+        }
+
+        /* --- Photo Gallery --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- Small Gifts Section --- */
+        .gifts-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .gift-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 200px;
+        }
+
+        .gift-box:hover {
+            transform: translateY(-10px);
+            background: var(--soft-pink);
+        }
+
+        .gift-icon { font-size: 3rem; margin-bottom: 10px; }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti"></canvas>
+
+    <section class="hero">
+        <h1>Happy Birthday, My Love</h1>
+        <p class="date">April 10th, 2011</p>
+    </section>
+
+    <section class="section">
+        <h2 style="font-family: 'Playfair Display';">A Million Little Reasons</h2>
+        <div class="love-note">
+            "Every day with you feels like a beautiful dream I never want to wake up from. Thank you for being my rock, my laugh, and my home."
+        </div>
+        
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1516589174184-c68526674fd6?auto=format&fit=crop&q=80&w=500" alt="Memory 1">
+            <img src="https://images.unsplash.com/photo-1522673607200-1648832cee77?auto=format&fit=crop&q=80&w=500" alt="Memory 2">
+            <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&q=80&w=500" alt="Memory 3">
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #ccd5ae;">
+        <h2 style="font-family: 'Playfair Display';">Small Tokens of My Love</h2>
+        <p>Click a gift to reveal a virtual surprise.</p>
+        <div class="gifts-container">
+            <div class="gift-box" onclick="window.location.href='../bunga-flower/index.html'">
+                <div class="gift-icon">୧⍤⃝💐</div>
+                <p>A Flower</p>
+            </div>
+            <div class="gift-box" onclick="alert('🎁 Buka TikTok Shop Sayangggg (˵ •̀ ᴗ - ˵ ) ✧')">
+                <div class="gift-icon">˚.🎁⋆</div>
+                <p>A Small Gift</p>
+            </div>
+            <div class="gift-box" onclick="alert('🎁 Virtual Voucher: A Weekend Getaway to Anywhere You Choose')">
+                <div class="gift-icon">💌🎀💕</div>
+                <p>A Virtual Note</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; • Made by your number #1 person with full of love for you.
+    </footer>
+
+    <script>
+        // --- Confetti Effect ---
+        const canvas = document.getElementById('confetti');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height - canvas.height;
+                this.size = Math.random() * 7 + 3;
+                this.speed = Math.random() * 3 + 1;
+                this.color = `hsl(${Math.random() * 360}, 70%, 80%)`;
+                this.angle = Math.random() * 6.28;
+            }
+            update() {
+                this.y += this.speed;
+                this.x += Math.sin(this.angle) * 0.5;
+                if (this.y > canvas.height) {
+                    this.y = -10;
+                    this.x = Math.random() * canvas.width;
+                }
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 100; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>

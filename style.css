@@ -1,0 +1,139 @@
+:root {
+    --primary-rose: #d4a373;
+    --soft-pink: #faedcd;
+    --deep-romance: #603808;
+    --white-silk: #fefae0;
+    --accent-green: #ccd5ae;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white-silk);
+    color: var(--deep-romance);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), 
+                url('https://images.unsplash.com/photo-1518131394553-c3e028063a52?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 2s ease-in;
+}
+
+.date {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* --- Content Sections --- */
+.section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.serif-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.love-note {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 40px 0;
+    padding: 20px;
+    border-left: 2px solid var(--primary-rose);
+}
+
+/* --- Gallery --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Gifts --- */
+.gift-section {
+    background-color: var(--accent-green);
+    max-width: 100%;
+}
+
+.gifts-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.gift-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.gift-box:hover {
+    transform: translateY(-10px);
+    background: var(--soft-pink);
+}
+
+.gift-icon { font-size: 3rem; margin-bottom: 10px; }
+
+/* --- Footer --- */
+footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
