@@ -53,6 +53,9 @@ function animate() {
 animate();
 
 // --- Gift Interaction ---
-function showGift(message) {
-    alert(message);
-}
+ function showPopup() {
+    document.getElementById('popup').style.display = 'flex';
+  }
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }

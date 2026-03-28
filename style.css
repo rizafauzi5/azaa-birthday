@@ -125,6 +125,14 @@ h1 {
 
 .gift-icon { font-size: 3rem; margin-bottom: 10px; }
 
+.gift-box {
+    cursor: pointer;
+    padding: 20px;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    text-align: center;
+    margin: 20px;
+  }
 /* --- Footer --- */
 footer {
     padding: 40px;
